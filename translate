@@ -1,0 +1,4 @@
+#!/bin/sh
+SELECTION="$(xsel -o | tr '\n' ' ')"
+TRANS=`trans --brief :en "$SELECTION"`
+notify-send -t 10000 -u critical "Source:" "$SELECTION\n\n<b>English:\n</b>$TRANS"
